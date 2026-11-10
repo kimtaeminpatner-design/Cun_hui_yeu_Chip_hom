@@ -1,1 +1,1671 @@
-# Cun_hui_yeu_Chip_hom
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Our Love Story ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family: "Segoe UI", sans-serif;
+    background:#fff0f5;
+    color:#5b2438;
+    overflow-x:hidden;
+}
+
+/* =========================
+   MÀN HÌNH MỞ ĐẦU
+========================= */
+
+.cover{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:
+        radial-gradient(circle at top left,#ffc4d8,transparent 40%),
+        radial-gradient(circle at bottom right,#ffb3c7,transparent 40%),
+        #fff0f5;
+    position:relative;
+}
+
+.cover-content{
+    z-index:2;
+    padding:30px;
+}
+
+.cover h1{
+    font-size:70px;
+    color:#c9184a;
+    margin-bottom:10px;
+    animation:fadeIn 2s;
+}
+
+.cover p{
+    font-size:20px;
+    margin-bottom:30px;
+    animation:fadeIn 3s;
+}
+
+.start-btn{
+    border:none;
+    padding:15px 35px;
+    border-radius:50px;
+    background:#c9184a;
+    color:white;
+    font-size:17px;
+    cursor:pointer;
+    box-shadow:0 10px 30px rgba(201,24,74,.3);
+    transition:.3s;
+}
+
+.start-btn:hover{
+    transform:scale(1.08);
+}
+
+/* =========================
+   HEART
+========================= */
+
+.big-heart{
+    font-size:90px;
+    animation:heartbeat 1.2s infinite;
+    display:inline-block;
+}
+
+@keyframes heartbeat{
+    0%,100%{transform:scale(1);}
+    25%{transform:scale(1.15);}
+    50%{transform:scale(1);}
+}
+
+/* =========================
+   SECTION
+========================= */
+
+section{
+    padding:80px 20px;
+    max-width:1000px;
+    margin:auto;
+}
+
+.title{
+    text-align:center;
+    color:#c9184a;
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.subtitle{
+    text-align:center;
+    margin-bottom:45px;
+    color:#8a5267;
+}
+
+/* =========================
+   COUNTER
+========================= */
+
+.counter{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.time-box{
+    background:white;
+    padding:20px;
+    min-width:120px;
+    text-align:center;
+    border-radius:20px;
+    box-shadow:0 8px 25px rgba(120,40,70,.12);
+}
+
+.time-box span{
+    display:block;
+    font-size:32px;
+    font-weight:bold;
+    color:#c9184a;
+}
+
+.time-box small{
+    color:#8a5267;
+}
+
+/* =========================
+   COUPLE
+========================= */
+
+.couple{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+    margin:30px 0;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.couple span{
+    color:#ff477e;
+    animation:heartbeat 1.2s infinite;
+}
+
+/* =========================
+   PHOTO
+========================= */
+
+.photos{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.photo{
+    height:300px;
+    border-radius:25px;
+    overflow:hidden;
+    background:#ffd6e4;
+    box-shadow:0 10px 30px rgba(120,40,70,.15);
+}
+
+.photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.photo img:hover{
+    transform:scale(1.08);
+}
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline{
+    border-left:3px solid #ff7096;
+    margin:40px auto;
+    max-width:700px;
+}
+
+.event{
+    margin:30px;
+    padding:25px;
+    background:white;
+    border-radius:20px;
+    box-shadow:0 8px 25px rgba(120,40,70,.1);
+    position:relative;
+}
+
+.event::before{
+    content:"❤️";
+    position:absolute;
+    left:-48px;
+    top:20px;
+    font-size:22px;
+}
+
+.event h3{
+    color:#c9184a;
+    margin-bottom:8px;
+}
+
+/* =========================
+   LETTER
+========================= */
+
+.letter-container{
+    text-align:center;
+}
+
+.open-letter{
+    border:none;
+    background:#c9184a;
+    color:white;
+    padding:15px 30px;
+    border-radius:50px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.letter{
+    display:none;
+    margin-top:30px;
+    background:#fff;
+    padding:40px;
+    border-radius:25px;
+    line-height:2;
+    text-align:left;
+    box-shadow:0 10px 35px rgba(120,40,70,.15);
+    animation:fadeIn 1s;
+}
+
+.letter h2{
+    text-align:center;
+    color:#c9184a;
+    margin-bottom:20px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    text-align:center;
+    padding:50px 20px;
+    background:#c9184a;
+    color:white;
+}
+
+footer p{
+    margin:8px;
+}
+
+/* =========================
+   FLOATING HEART
+========================= */
+
+.floating-heart{
+    position:fixed;
+    bottom:-30px;
+    pointer-events:none;
+    z-index:999;
+    animation:fly 6s linear forwards;
+}
+
+@keyframes fly{
+    0%{
+        transform:translateY(0) rotate(0);
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:700px){
+
+    .cover h1{
+        font-size:45px;
+    }
+
+    .cover p{
+        font-size:16px;
+    }
+
+    .photos{
+        grid-template-columns:1fr;
+    }
+
+    .photo{
+        height:350px;
+    }
+
+    .couple{
+        font-size:22px;
+        gap:15px;
+    }
+
+    .title{
+        font-size:32px;
+    }
+
+    .letter{
+        padding:25px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     COVER
+========================= -->
+
+<div class="cover">
+
+    <div class="cover-content">
+
+        <div class="big-heart">❤️</div>
+
+        <h1>Câu Chuyện Tình Yêu Của Chúng Ta</h1>
+
+        <p>
+            Phạm Trần Trúc Ly yêu Trần Ngọc Minh Trang<br>
+            cún húi yêu chíp hơm
+        </p>
+
+        <button class="start-btn"
+        onclick="document.getElementById('story').scrollIntoView()">
+
+            vợ hãy cùng tui đi tiếp nhé 💌
+
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================
+     LOVE TIME
+========================= -->
+
+<section id="story">
+
+    <h2 class="title">
+        Chúng mình đã yêu nhau...
+    </h2>
+
+    <p class="subtitle">
+        Từng ngày, từng giờ, từng phút và từng giây ❤️
+    </p>
+
+    <div class="couple">
+
+        <span>CÚN</span>
+
+        ❤️
+
+        <span>VỢ</span>
+
+    </div>
+
+    <p style="text-align:center;margin-bottom:30px;">
+
+        Bắt đầu từ ngày:
+        <b>03/08/2026</b>
+
+    </p>
+
+
+    <div class="counter">
+
+        <div class="time-box">
+            <span id="days">0</span>
+            <small>Ngày</small>
+        </div>
+
+        <div class="time-box">
+            <span id="hours">0</span>
+            <small>Giờ</small>
+        </div>
+
+        <div class="time-box">
+            <span id="minutes">0</span>
+            <small>Phút</small>
+        </div>
+
+        <div class="time-box">
+            <span id="seconds">0</span>
+            <small>Giây</small>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PHOTO
+========================= -->
+
+<section>
+
+    <h2 class="title">
+        tui muốn đến bên em 
+    </h2>
+
+    <p class="subtitle">
+        Vì em chính là tất cả đối với tui <br>
+		hình ảnh bạn gái siêu hơm của Trần Ngọc Minh Trang
+		
+    </p>
+
+
+    <div class="photos">
+
+        <!-- THAY ẢNH Ở ĐÂY -->
+
+        <div class="photo">
+            <img src="1793975767246_850775825210690988_7081327310934716199_df3a6cd6d4f91d63a57a83bee2414792.jpg">
+        </div>
+
+        <div class="photo">
+            <img src="anhsusu.jpg">
+        </div>
+
+        <div class="photo">
+            <img src="1793975767266_850775825210690988_7081327310934716199_76c1b0aba167465dea6f94ca9f8dcdda.jpg">
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     TIMELINE
+========================= -->
+
+<section>
+
+    <h2 class="title">
+        Câu chuyện của chúng mình 📖
+    </h2>
+
+    <p class="subtitle">
+        Lộ trình tình yêu xuyên không gian thời gian
+    </p>
+
+
+    <div class="timeline">
+
+        <div class="event">
+
+            <h3>03/08/2026 — Ngày bắt đầu ❤️</h3>
+
+            <p>
+                Ngày mà hai chúng ta chính thức
+                là của nhau.
+            </p>
+
+        </div>
+
+
+        <div class="event">
+
+            <h3>Ngày đầu tiên</h3>
+
+            <p>
+                Có thể lúc đó chúng mình chưa biết
+                rằng người mà mình đang nhắn tin sẽ trở thành
+                một người quan trọng đến thế.
+            </p>
+
+        </div>
+
+
+        <div class="event">
+
+            <h3>100 ngày 💗</h3>
+
+            <p>
+                100 ngày không phải quá dài,
+                nhưng đủ để có thể tui cảm nhận được, em chính là báu vật trời ban cho tui.
+            </p>
+
+        </div>
+
+
+        <div class="event">
+
+            <h3>Và những ngày sau này...</h3>
+
+            <p>
+                Câu chuyện vẫn còn tiếp tục.
+                Và tui luôn hy vọng chương tiếp theo
+                vẫn có chúng ta.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     LETTER
+========================= -->
+
+<section>
+
+    <h2 class="title">
+        Một bức thư dành cho chíp 💌
+    </h2>
+
+    <p class="subtitle">
+        Có những điều nói trực tiếp thật khó...
+    </p>
+
+
+    <div class="letter-container">
+
+        <button class="open-letter"
+        onclick="openLetter()">
+
+            💌 Mở thư
+
+        </button>
+
+
+        <div class="letter" id="letter">
+
+            <h2>Gửi vợ yêu dấu của tớ ❤️</h2>
+
+            <p>
+
+                Em có biết, trước đây, xe ngựa đi rất chậm, thư từ ở rất xa và cả đời chỉ đủ yêu một người. Yêu dấu của tớ, có nghĩ vậy không?
+
+                <br><br>
+				Tớ từng nghĩ thời đại này mọi thứ đều quá vội vã.
+				Người ta dễ rung động vào một buổi chiều đầy nắng, rồi
+				cũng dễ đi khi bóng tối vừa kịp chạm thềm.
+				Tớ đã từng nghĩ sẽ chẳng có một ngày yêu ai đó một các say đắm và mềm mại cho tới khi gặp em..
+
+                Có lẽ điều tuyệt vời nhất trong những
+                ngày tháng vừa qua chính là việc chúng
+                mình đã gặp được nhau.
+
+                <br><br>
+
+                Trước hết, tớ xin lỗi em vì những việc làm khiến em không vui đã xảy ra trong quá khứ, tớ biết rằng mình còn 
+				quá ngu ngơ và vô tư để có thể hiểu hết những ảnh hưởng mà tớ đã làm. Vì cũng là lần đầu được yêu, sau khi ngẫm nghĩ tớ lại 
+				cảm thấy rằng mình rất ngu khi đã làm em buồn, làm em suy nghĩ và giận hờn. Tớ xin lỗi em rất nhiều và hơn hết
+				cũng cảm ơn em vì đã cho tớ cơ hội sửa lỗi, đã không bỏ rơi tớ. Tớ xin lỗi và cảm ơn em rất nhiều.
+
+                <br>
+
+                Chẳng hiểu sao, dạo này tớ rất nhớ em, nhớ ngay cả khi mình nhắn tin hay lúc mình call với nhau có phải 
+				mình bị điên rồi không. Tới đây tớ phải nói thật, thật ra tớ thích em trước cả khi em nhắn tin cho tớ, nhưng
+				mà tớ rất ngại để nói ra. Và bây giờ tớ hiểu được rằng, thì ra em trong những ngày chúng ta không là gì của nhau,
+				em vẫn lặng lẽ sống trong tâm trí tớ, bằng cách nào đó rất dai dẳng.
+
+                <br><br>
+
+                Cảm ơn em vì đã xuất hiện trong cuộc đời
+                tớ. Cảm ơn vì những ngày vui,
+                những lần giận dỗi, những cuộc trò chuyện
+                đến khuya và cả những khoảnh khắc
+                chúng mình chẳng cần nói gì nhưng
+                vẫn cảm thấy bình yên khi ở cạnh nhau.
+
+                <br><br>
+
+                Tớ không hứa rằng mọi ngày sau này
+                đều sẽ hoàn hảo.
+
+                <br>
+
+                Nhưng tớ hứa rằng nếu có một ngày
+                chúng mình gặp khó khăn,
+                tớ vẫn muốn là người ở bên em
+                và cùng em giải quyết.
+
+                <br><br>
+
+                Nếu cuộc đời là một hành trình dài,
+                điều tớ mong muốn nhất là được
+                đi cùng em thật lâu. Sau này có nhà, tớ mong trong nhà luôn có món mà em thích!
+				Nên là...Phiền em chịu khó xuất hiện trong những dự định tương lai của tớ được không?
+
+                <br><br>
+
+                <b>
+                Yêu em vì em là chính em, và vì em đã chọn thương lại người thương em.
+                </b>
+
+                <br><br>
+
+                Thương em rất nhiều. ❤️
+
+                <br><br>
+
+                — Phạm Trần Trúc Ly aka cún iu của Em —
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div style="font-size:40px;">
+        ❤️
+    </div>
+
+    <p>
+        Our story is still being written...
+    </p>
+
+    <p>
+        Và chương tiếp theo vẫn sẽ là chúng mình trong tương lai.
+    </p>
+
+</footer>
+
+
+
+<script>
+
+/* =========================
+   COUNT LOVE TIME
+========================= */
+
+const startDate =
+new Date("2026-08-03T00:00:00");
+
+
+function updateCounter(){
+
+    const now = new Date();
+
+    let difference =
+        now - startDate;
+
+    if(difference < 0)
+        difference = 0;
+
+
+    const days =
+        Math.floor(
+            difference /
+            (1000*60*60*24)
+        );
+
+
+    const hours =
+        Math.floor(
+            (difference /
+            (1000*60*60)) % 24
+        );
+
+
+    const minutes =
+        Math.floor(
+            (difference /
+            (1000*60)) % 60
+        );
+
+
+    const seconds =
+        Math.floor(
+            (difference /
+            1000) % 60
+        );
+
+
+    document.getElementById("days")
+        .innerText = days;
+
+    document.getElementById("hours")
+        .innerText = hours;
+
+    document.getElementById("minutes")
+        .innerText = minutes;
+
+    document.getElementById("seconds")
+        .innerText = seconds;
+
+}
+
+
+setInterval(updateCounter,1000);
+
+updateCounter();
+
+
+
+/* =========================
+   OPEN LETTER
+========================= */
+
+function openLetter(){
+
+    const letter =
+        document.getElementById("letter");
+
+    if(letter.style.display === "block"){
+
+        letter.style.display = "none";
+
+    }else{
+
+        letter.style.display = "block";
+
+    }
+
+}
+
+
+
+/* =========================
+   FLOATING HEART
+========================= */
+
+function createHeart(){
+
+    const heart =
+        document.createElement("div");
+
+    heart.className =
+        "floating-heart";
+
+    const hearts =
+        ["❤️","💕","💗","💖","💘","💓"];
+
+    heart.innerHTML =
+        hearts[
+            Math.floor(
+                Math.random()*hearts.length
+            )
+        ];
+
+
+    heart.style.left =
+        Math.random()*100 + "vw";
+
+
+    heart.style.fontSize =
+        (15 + Math.random()*25) + "px";
+
+
+    heart.style.animationDuration =
+        (4 + Math.random()*4) + "s";
+
+
+    document.body.appendChild(heart);
+
+
+    setTimeout(
+        () => heart.remove(),
+        8000
+    );
+
+}
+
+
+setInterval(createHeart,600);
+
+</script>
+
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Our Love Story ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family: "Segoe UI", sans-serif;
+    background:#fff0f5;
+    color:#5b2438;
+    overflow-x:hidden;
+}
+
+/* =========================
+   MÀN HÌNH MỞ ĐẦU
+========================= */
+
+.cover{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:
+        radial-gradient(circle at top left,#ffc4d8,transparent 40%),
+        radial-gradient(circle at bottom right,#ffb3c7,transparent 40%),
+        #fff0f5;
+    position:relative;
+}
+
+.cover-content{
+    z-index:2;
+    padding:30px;
+}
+
+.cover h1{
+    font-size:70px;
+    color:#c9184a;
+    margin-bottom:10px;
+    animation:fadeIn 2s;
+}
+
+.cover p{
+    font-size:20px;
+    margin-bottom:30px;
+    animation:fadeIn 3s;
+}
+
+.start-btn{
+    border:none;
+    padding:15px 35px;
+    border-radius:50px;
+    background:#c9184a;
+    color:white;
+    font-size:17px;
+    cursor:pointer;
+    box-shadow:0 10px 30px rgba(201,24,74,.3);
+    transition:.3s;
+}
+
+.start-btn:hover{
+    transform:scale(1.08);
+}
+
+/* =========================
+   HEART
+========================= */
+
+.big-heart{
+    font-size:90px;
+    animation:heartbeat 1.2s infinite;
+    display:inline-block;
+}
+
+@keyframes heartbeat{
+    0%,100%{transform:scale(1);}
+    25%{transform:scale(1.15);}
+    50%{transform:scale(1);}
+}
+
+/* =========================
+   SECTION
+========================= */
+
+section{
+    padding:80px 20px;
+    max-width:1000px;
+    margin:auto;
+}
+
+.title{
+    text-align:center;
+    color:#c9184a;
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.subtitle{
+    text-align:center;
+    margin-bottom:45px;
+    color:#8a5267;
+}
+
+/* =========================
+   COUNTER
+========================= */
+
+.counter{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.time-box{
+    background:white;
+    padding:20px;
+    min-width:120px;
+    text-align:center;
+    border-radius:20px;
+    box-shadow:0 8px 25px rgba(120,40,70,.12);
+}
+
+.time-box span{
+    display:block;
+    font-size:32px;
+    font-weight:bold;
+    color:#c9184a;
+}
+
+.time-box small{
+    color:#8a5267;
+}
+
+/* =========================
+   COUPLE
+========================= */
+
+.couple{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+    margin:30px 0;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.couple span{
+    color:#ff477e;
+    animation:heartbeat 1.2s infinite;
+}
+
+/* =========================
+   PHOTO
+========================= */
+
+.photos{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.photo{
+    height:300px;
+    border-radius:25px;
+    overflow:hidden;
+    background:#ffd6e4;
+    box-shadow:0 10px 30px rgba(120,40,70,.15);
+}
+
+.photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.photo img:hover{
+    transform:scale(1.08);
+}
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline{
+    border-left:3px solid #ff7096;
+    margin:40px auto;
+    max-width:700px;
+}
+
+.event{
+    margin:30px;
+    padding:25px;
+    background:white;
+    border-radius:20px;
+    box-shadow:0 8px 25px rgba(120,40,70,.1);
+    position:relative;
+}
+
+.event::before{
+    content:"❤️";
+    position:absolute;
+    left:-48px;
+    top:20px;
+    font-size:22px;
+}
+
+.event h3{
+    color:#c9184a;
+    margin-bottom:8px;
+}
+
+/* =========================
+   LETTER
+========================= */
+
+.letter-container{
+    text-align:center;
+}
+
+.open-letter{
+    border:none;
+    background:#c9184a;
+    color:white;
+    padding:15px 30px;
+    border-radius:50px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.letter{
+    display:none;
+    margin-top:30px;
+    background:#fff;
+    padding:40px;
+    border-radius:25px;
+    line-height:2;
+    text-align:left;
+    box-shadow:0 10px 35px rgba(120,40,70,.15);
+    animation:fadeIn 1s;
+}
+
+.letter h2{
+    text-align:center;
+    color:#c9184a;
+    margin-bottom:20px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    text-align:center;
+    padding:50px 20px;
+    background:#c9184a;
+    color:white;
+}
+
+footer p{
+    margin:8px;
+}
+
+/* =========================
+   FLOATING HEART
+========================= */
+
+.floating-heart{
+    position:fixed;
+    bottom:-30px;
+    pointer-events:none;
+    z-index:999;
+    animation:fly 6s linear forwards;
+}
+
+@keyframes fly{
+    0%{
+        transform:translateY(0) rotate(0);
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:700px){
+
+    .cover h1{
+        font-size:45px;
+    }
+
+    .cover p{
+        font-size:16px;
+    }
+
+    .photos{
+        grid-template-columns:1fr;
+    }
+
+    .photo{
+        height:350px;
+    }
+
+    .couple{
+        font-size:22px;
+        gap:15px;
+    }
+
+    .title{
+        font-size:32px;
+    }
+
+    .letter{
+        padding:25px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     COVER
+========================= -->
+
+<div class="cover">
+
+    <div class="cover-content">
+
+        <div class="big-heart">❤️</div>
+
+        <h1>Câu Chuyện Tình Yêu Của Chúng Ta</h1>
+
+        <p>
+            Phạm Trần Trúc Ly yêu Trần Ngọc Minh Trang<br>
+            cún húi yêu chíp hơm
+        </p>
+
+        <button class="start-btn"
+        onclick="document.getElementById('story').scrollIntoView()">
+
+            vợ hãy cùng tui đi tiếp nhé 💌
+
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================
+     LOVE TIME
+========================= -->
+
+<section id="story">
+
+    <h2 class="title">
+        Chúng mình đã yêu nhau...
+    </h2>
+
+    <p class="subtitle">
+        Từng ngày, từng giờ, từng phút và từng giây ❤️
+    </p>
+
+    <div class="couple">
+
+        <span>CÚN</span>
+
+        ❤️
+
+        <span>VỢ</span>
+
+    </div>
+
+    <p style="text-align:center;margin-bottom:30px;">
+
+        Bắt đầu từ ngày:
+        <b>03/08/2026</b>
+
+    </p>
+
+
+    <div class="counter">
+
+        <div class="time-box">
+            <span id="days">0</span>
+            <small>Ngày</small>
+        </div>
+
+        <div class="time-box">
+            <span id="hours">0</span>
+            <small>Giờ</small>
+        </div>
+
+        <div class="time-box">
+            <span id="minutes">0</span>
+            <small>Phút</small>
+        </div>
+
+        <div class="time-box">
+            <span id="seconds">0</span>
+            <small>Giây</small>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PHOTO
+========================= -->
+
+<section>
+
+    <h2 class="title">
+        tui muốn đến bên em 
+    </h2>
+
+    <p class="subtitle">
+        Vì em chính là tất cả đối với tui <br>
+		hình ảnh bạn gái siêu hơm của Trần Ngọc Minh Trang
+		
+    </p>
+
+
+    <div class="photos">
+
+        <!-- THAY ẢNH Ở ĐÂY -->
+
+        <div class="photo">
+            <img src="1793975767246_850775825210690988_7081327310934716199_df3a6cd6d4f91d63a57a83bee2414792.jpg">
+        </div>
+
+        <div class="photo">
+            <img src="anhsusu.jpg">
+        </div>
+
+        <div class="photo">
+            <img src="1793975767266_850775825210690988_7081327310934716199_76c1b0aba167465dea6f94ca9f8dcdda.jpg">
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     TIMELINE
+========================= -->
+
+<section>
+
+    <h2 class="title">
+        Câu chuyện của chúng mình 📖
+    </h2>
+
+    <p class="subtitle">
+        Lộ trình tình yêu xuyên không gian thời gian
+    </p>
+
+
+    <div class="timeline">
+
+        <div class="event">
+
+            <h3>03/08/2026 — Ngày bắt đầu ❤️</h3>
+
+            <p>
+                Ngày mà hai chúng ta chính thức
+                là của nhau.
+            </p>
+
+        </div>
+
+
+        <div class="event">
+
+            <h3>Ngày đầu tiên</h3>
+
+            <p>
+                Có thể lúc đó chúng mình chưa biết
+                rằng người mà mình đang nhắn tin sẽ trở thành
+                một người quan trọng đến thế.
+            </p>
+
+        </div>
+
+
+        <div class="event">
+
+            <h3>100 ngày 💗</h3>
+
+            <p>
+                100 ngày không phải quá dài,
+                nhưng đủ để có thể tui cảm nhận được, em chính là báu vật trời ban cho tui.
+            </p>
+
+        </div>
+
+
+        <div class="event">
+
+            <h3>Và những ngày sau này...</h3>
+
+            <p>
+                Câu chuyện vẫn còn tiếp tục.
+                Và tui luôn hy vọng chương tiếp theo
+                vẫn có chúng ta.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     LETTER
+========================= -->
+
+<section>
+
+    <h2 class="title">
+        Một bức thư dành cho chíp 💌
+    </h2>
+
+    <p class="subtitle">
+        Có những điều nói trực tiếp thật khó...
+    </p>
+
+
+    <div class="letter-container">
+
+        <button class="open-letter"
+        onclick="openLetter()">
+
+            💌 Mở thư
+
+        </button>
+
+
+        <div class="letter" id="letter">
+
+            <h2>Gửi vợ yêu dấu của tớ ❤️</h2>
+
+            <p>
+
+                Em có biết, trước đây, xe ngựa đi rất chậm, thư từ ở rất xa và cả đời chỉ đủ yêu một người. Yêu dấu của tớ, có nghĩ vậy không?
+
+                <br><br>
+				Tớ từng nghĩ thời đại này mọi thứ đều quá vội vã.
+				Người ta dễ rung động vào một buổi chiều đầy nắng, rồi
+				cũng dễ đi khi bóng tối vừa kịp chạm thềm.
+				Tớ đã từng nghĩ sẽ chẳng có một ngày yêu ai đó một các say đắm và mềm mại cho tới khi gặp em..
+
+                Có lẽ điều tuyệt vời nhất trong những
+                ngày tháng vừa qua chính là việc chúng
+                mình đã gặp được nhau.
+
+                <br><br>
+
+                Trước hết, tớ xin lỗi em vì những việc làm khiến em không vui đã xảy ra trong quá khứ, tớ biết rằng mình còn 
+				quá ngu ngơ và vô tư để có thể hiểu hết những ảnh hưởng mà tớ đã làm. Vì cũng là lần đầu được yêu, sau khi ngẫm nghĩ tớ lại 
+				cảm thấy rằng mình rất ngu khi đã làm em buồn, làm em suy nghĩ và giận hờn. Tớ xin lỗi em rất nhiều và hơn hết
+				cũng cảm ơn em vì đã cho tớ cơ hội sửa lỗi, đã không bỏ rơi tớ. Tớ xin lỗi và cảm ơn em rất nhiều.
+
+                <br>
+
+                Chẳng hiểu sao, dạo này tớ rất nhớ em, nhớ ngay cả khi mình nhắn tin hay lúc mình call với nhau có phải 
+				mình bị điên rồi không. Tới đây tớ phải nói thật, thật ra tớ thích em trước cả khi em nhắn tin cho tớ, nhưng
+				mà tớ rất ngại để nói ra. Và bây giờ tớ hiểu được rằng, thì ra em trong những ngày chúng ta không là gì của nhau,
+				em vẫn lặng lẽ sống trong tâm trí tớ, bằng cách nào đó rất dai dẳng.
+
+                <br><br>
+
+                Cảm ơn em vì đã xuất hiện trong cuộc đời
+                tớ. Cảm ơn vì những ngày vui,
+                những lần giận dỗi, những cuộc trò chuyện
+                đến khuya và cả những khoảnh khắc
+                chúng mình chẳng cần nói gì nhưng
+                vẫn cảm thấy bình yên khi ở cạnh nhau.
+
+                <br><br>
+
+                Tớ không hứa rằng mọi ngày sau này
+                đều sẽ hoàn hảo.
+
+                <br>
+
+                Nhưng tớ hứa rằng nếu có một ngày
+                chúng mình gặp khó khăn,
+                tớ vẫn muốn là người ở bên em
+                và cùng em giải quyết.
+
+                <br><br>
+
+                Nếu cuộc đời là một hành trình dài,
+                điều tớ mong muốn nhất là được
+                đi cùng em thật lâu. Sau này có nhà, tớ mong trong nhà luôn có món mà em thích!
+				Nên là...Phiền em chịu khó xuất hiện trong những dự định tương lai của tớ được không?
+
+                <br><br>
+
+                <b>
+                Yêu em vì em là chính em, và vì em đã chọn thương lại người thương em.
+                </b>
+
+                <br><br>
+
+                Thương em rất nhiều. ❤️
+
+                <br><br>
+
+                — Phạm Trần Trúc Ly aka cún iu của Em —
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div style="font-size:40px;">
+        ❤️
+    </div>
+
+    <p>
+        Our story is still being written...
+    </p>
+
+    <p>
+        Và chương tiếp theo vẫn sẽ là chúng mình trong tương lai.
+    </p>
+
+</footer>
+
+
+
+<script>
+
+/* =========================
+   COUNT LOVE TIME
+========================= */
+
+const startDate =
+new Date("2026-08-03T00:00:00");
+
+
+function updateCounter(){
+
+    const now = new Date();
+
+    let difference =
+        now - startDate;
+
+    if(difference < 0)
+        difference = 0;
+
+
+    const days =
+        Math.floor(
+            difference /
+            (1000*60*60*24)
+        );
+
+
+    const hours =
+        Math.floor(
+            (difference /
+            (1000*60*60)) % 24
+        );
+
+
+    const minutes =
+        Math.floor(
+            (difference /
+            (1000*60)) % 60
+        );
+
+
+    const seconds =
+        Math.floor(
+            (difference /
+            1000) % 60
+        );
+
+
+    document.getElementById("days")
+        .innerText = days;
+
+    document.getElementById("hours")
+        .innerText = hours;
+
+    document.getElementById("minutes")
+        .innerText = minutes;
+
+    document.getElementById("seconds")
+        .innerText = seconds;
+
+}
+
+
+setInterval(updateCounter,1000);
+
+updateCounter();
+
+
+
+/* =========================
+   OPEN LETTER
+========================= */
+
+function openLetter(){
+
+    const letter =
+        document.getElementById("letter");
+
+    if(letter.style.display === "block"){
+
+        letter.style.display = "none";
+
+    }else{
+
+        letter.style.display = "block";
+
+    }
+
+}
+
+
+
+/* =========================
+   FLOATING HEART
+========================= */
+
+function createHeart(){
+
+    const heart =
+        document.createElement("div");
+
+    heart.className =
+        "floating-heart";
+
+    const hearts =
+        ["❤️","💕","💗","💖","💘","💓"];
+
+    heart.innerHTML =
+        hearts[
+            Math.floor(
+                Math.random()*hearts.length
+            )
+        ];
+
+
+    heart.style.left =
+        Math.random()*100 + "vw";
+
+
+    heart.style.fontSize =
+        (15 + Math.random()*25) + "px";
+
+
+    heart.style.animationDuration =
+        (4 + Math.random()*4) + "s";
+
+
+    document.body.appendChild(heart);
+
+
+    setTimeout(
+        () => heart.remove(),
+        8000
+    );
+
+}
+
+
+setInterval(createHeart,600);
+
+</script>
+
+
+</body>
+</html>
